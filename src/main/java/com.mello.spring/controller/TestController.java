@@ -1,4 +1,5 @@
-package com.spring.controller;
+package com.mello.spring.controller;
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
