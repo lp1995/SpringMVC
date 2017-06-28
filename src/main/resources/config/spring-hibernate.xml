@@ -24,7 +24,7 @@
     <!--配置hibernate的SessionFactory实例,通过Spring提供的LocalSessionFactorybean进行配置  -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <!-- 配置数据源属性 -->
-        <property name="dataSource" ref="dataSource"></property>
+        <property name= "dataSource" ref="dataSource"></property>
 
 
         <!-- 配置hibernate.cfg.xml的位置及名称-->
@@ -35,14 +35,24 @@
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.format_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.hbm2ddl.auto">create</prop>
             </props>
         </property>
 
+
+      <!--  <property name="mappingResources">
+            <value>classpath:hbm/userTest.hbm.xml</value>
+        </property>-->
         <!-- 配置hibernate映射文件的位置及名称,可以使用通配符-->
         <property name="mappingDirectoryLocations">
             <list>
-                <value>classpath:config/hbm/</value>
+                <value>classpath:hbm/userTest.hbm.xml</value>
+            </list>
+        </property>
+
+        <property name="annotatedClasses">
+            <list>
+                <value>com.mello.spring.entity.News</value>
             </list>
         </property>
     </bean>

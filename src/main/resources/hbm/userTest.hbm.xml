@@ -2,8 +2,8 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2014-9-29 8:46:32 by Hibernate Tools 3.4.0.CR1 -->
-<hibernate-mapping>
-    <class name="com.mello.spring.entity.News" table="usertest">
+<hibernate-mapping package="com.mello.spring.entity">
+    <class name="News" table="TEST_NEWS">
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
             <generator class="native" />
