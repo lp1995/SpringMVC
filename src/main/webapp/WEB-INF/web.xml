@@ -16,8 +16,11 @@
     <init-param>
       <!--Sources标注的文件夹下需要新建一个spring文件夹-->
       <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:config/spring-mvc.xml,
-                   classpath:config/spring-hibernate.xml,
+      <param-value>
+        classpath:config/spring-mvc.xml,
+        classpath:config/spring-hibernate.xml,
+        classpath:config/spring-service.xml,
+        classpath:config/spring-dao.xml,
       </param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
