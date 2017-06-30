@@ -14,6 +14,10 @@ public class UserDaoImpl extends DaoImpl<User,Integer> implements UserDao {
 
     @Override
     public List<User> getAllList() {
-        return super.getAll();
+        String sql = "select * from user";
+        return super.sqlFind(sql);
+        //return super.getAll();
     }
+
+
 }

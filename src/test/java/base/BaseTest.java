@@ -4,10 +4,10 @@ import com.mello.spring.dao.rabc.UserDao;
 import com.mello.spring.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -21,7 +21,7 @@ import java.util.List;
 })
 public class BaseTest {
 
-    @Autowired
+    @Resource(name="userDao")
     private UserDao userDao;
     @Test
     public void test(){
